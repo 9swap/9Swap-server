@@ -17,7 +17,7 @@ class FullNodeClient():
         self.host = host
         self.port = port
         self.API_url = f"{'https' if https else 'http'}://{host}"
-        if self.port is not None:
+        if self.port:
             self.API_url = f'{self.API_url}:{self.port}'
         self.logfile = logfile
         self.prefix = prefix if not prefix else f'/{prefix}'
@@ -43,10 +43,10 @@ class FullNodeClient():
             return {}
 
     def getBlockchainState(self):
-        return self._makeRequest(f"{self.prefix}//get_blockchain_state", {})
+        return self._makeRequest(f"{self.prefix}/get_blockchain_state", {})
 
     def getBlockchainHeight(self):
-        r = self._makeRequest(f"{self.prefix}//get_blockchain_state", {})
+        r = self._makeRequest(f"{self.prefix}/get_blockchain_state", {})
         while r == {} or r['blockchain_state']['sync']['synced'] == False:
             time.sleep(20)
             r = self._makeRequest("/get_blockchain_state", {})
@@ -58,7 +58,7 @@ class FullNodeClient():
     def getContractCoinRecord(self, puzzleHash, start, include_spent_coins=False):
         if debug:
             print(f"Searching for puzzle hash: {puzzleHash}")
-        result = self._makeRequest(f"{self.prefix}//get_coin_records_by_puzzle_hash", {
+        result = self._makeRequest(f"{self.prefix}/get_coin_records_by_puzzle_hash", {
             "include_spent_coins": include_spent_coins,
             "puzzle_hash": puzzleHash,
             "start": start,
@@ -69,7 +69,7 @@ class FullNodeClient():
         return coin_record
 
     def pushTransaction(self, puzzle, solution, coin):
-        resp = self._makeRequest(f"{self.prefix}//push_tx", {
+        resp = self._makeRequest(f"{self.prefix}/push_tx", {
             "spend_bundle": {
                 "coin_solutions": [{
                     "coin": coin,
@@ -86,7 +86,7 @@ class FullNodeClient():
         return "pending"
 
     def getCoinSolution(self, coinId, height):
-        resp = self._makeRequest(f"{self.prefix}//get_puzzle_and_solution", {
+        resp = self._makeRequest(f"{self.prefix}/get_puzzle_and_solution", {
             "coin_id": coinId,
             "height": height,
         })
