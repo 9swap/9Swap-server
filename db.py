@@ -109,80 +109,84 @@ def guessSslDirFor(currencyName):
 
 
 addCurrency('nch', 'NChain', 'https://raw.githubusercontent.com/9swap/9Swap/master/web/icons/nch_circle.svg',
-            1000000000000, 1, 192, 32, 'rpcs.9swap.cyou/nchain', '', '')
+            1000000000000, 1, 192, 32, '127.0.0.1', 38555, guessSslDirFor("chia/ext9"))
 addCurrency('xch', 'Chia',
             'https://raw.githubusercontent.com/Chia-Network/chia-blockchain-gui/main/src/assets/img/chia_circle.svg',
-            1000000000000, 1, 192, 32, 'rpcs.9swap.cyou/chia', '', '')
+            1000000000000, 1, 192, 32, '127.0.0.1', 8555, guessSslDirFor("Chia"))
+
+addCurrency('7xch', '7Chia',
+            'https://raw.githubusercontent.com/Chia-Network/chia-blockchain-gui/main/src/assets/img/chia_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 28555, guessSslDirFor("chia/estnet7"))
+
 addCurrency('xfx', 'Flax',
             'https://raw.githubusercontent.com/Flax-Network/flax-blockchain-gui/main/src/assets/img/flax_circle.svg',
-            1000000000000, 1, 192, 32, 'rpcs.9swap.cyou/flax', '', '')
-#
-# addCurrency('cgn', 'Chaingreen',
-#             'https://raw.githubusercontent.com/ChainGreenOrg/chaingreen-blockchain-gui/main/src/assets/img/chia_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 8855, guessSslDirFor("Chaingreen"))
-# addCurrency('xcc', 'Chives',
-#             'https://raw.githubusercontent.com/HiveProject2021/chives-blockchain-gui/main/src/assets/img/chives_circle.png',
-#             100000000, 1, 192, 32, '127.0.0.1', 9755, guessSslDirFor("Chives"))
-# addCurrency('spare', 'Spare',
-#             'https://raw.githubusercontent.com/Spare-Network/spare-blockchain/master/spare-blockchain-gui/src/assets/img/spare.ico',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 9555, guessSslDirFor("spare-blockchain"))
-# addCurrency('xfl', 'Flora',
-#             'https://raw.githubusercontent.com/Flora-Network/flora-blockchain-gui/main/src/assets/img/flora_circle.png',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 18755, guessSslDirFor("Flora"))
-# addCurrency('xdg', 'DogeChia',
-#             'https://raw.githubusercontent.com/DogeChia/dogechia-blockchain-gui/main/src/assets/img/dogechia.png',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 6769, guessSslDirFor("DogeChia"))
-# # no seno_circle.svg, no logo.
-# addCurrency('xse', 'Seno',
-#             'https://raw.githubusercontent.com/Chia-Network/chia-blockchain-gui/main/src/assets/img/chia_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 18555, guessSslDirFor("Seno2"))
-# addCurrency('xcr', 'Chiarose',
-#             'https://raw.githubusercontent.com/snight1983/chia-rosechain/main/chia-rosechain-gui/src/assets/img/chia_circle.png',
-#             1000000000, 1, 192, 32, '127.0.0.1', 8025, guessSslDirFor("Chiarose"))
-# addCurrency('hdd', 'HDDCoin',
-#             'https://raw.githubusercontent.com/HDDcoin-Network/hddcoin-blockchain/main/hddcoin-blockchain-gui/src/assets/img/hddcoin_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 28555, guessSslDirFor("HDDCoin"))
-# addCurrency('sit', 'Silicoin',
-#             'https://raw.githubusercontent.com/silicoin-network/silicoin-blockchain-gui/main/src/assets/img/chia_circle.png',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 10555, guessSslDirFor("Silicoin"))
-# addCurrency('gdog', 'GreenDoge',
-#             'https://raw.githubusercontent.com/GreenDoge-Network/greendoge-blockchain/main/greendoge-blockchain-gui/src/assets/img/greendoge_circle.png',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 6655, guessSslDirFor("GreenDoge"))
-# addCurrency('avo', 'Avocado',
-#             'https://raw.githubusercontent.com/Avocado-Network/avocado-blockchain-gui/main/src/assets/img/avocado_circle.png',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 7544, guessSslDirFor("Avocado"))
-# addCurrency('xka', 'Kale',
-#             'https://raw.githubusercontent.com/Kale-Network/kale-blockchain/main/kale-blockchain-gui/src/assets/img/kale_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 6355, guessSslDirFor("Kale"))
-# addCurrency('xtx', 'Taco',
-#             'https://raw.githubusercontent.com/Taco-Network/taco-blockchain/main/taco-blockchain-gui/src/assets/img/taco_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 18735, guessSslDirFor("Taco"))
-# addCurrency('xeq', 'Equality',
-#             'https://raw.githubusercontent.com/Equality-Network/equality-blockchain-gui/master/src/assets/img/equality_circle.png',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 9547, guessSslDirFor("Equality"))
-# addCurrency('sock', 'Socks',
-#             'https://bitbucket.org/Socks-Network/socks-blockchain-gui/raw/aefb284f40a2ff521591d79702b478317581ce94/src/assets/img/socks_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 58455, guessSslDirFor("Socks"))
-# addCurrency('wheat', 'Wheat',
-#             'https://raw.githubusercontent.com/wheatnetwork/wheat-blockchain-gui/main/src/assets/img/wheat_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 21555, guessSslDirFor("Wheat"))
-# addCurrency('xmx', 'Melati',
-#             'https://raw.githubusercontent.com/Melati-Network/melati-blockchain-gui/main/src/assets/img/melati_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 2555, guessSslDirFor("Melati"))
-# addCurrency('tad', 'Tad',
-#             'https://raw.githubusercontent.com/Tad-Network/tad-blockchain-gui/main/src/assets/img/tad_circle.png',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 4555, guessSslDirFor("Tad"))
-# addCurrency('xsc', 'Sector',
-#             'https://raw.githubusercontent.com/Sector-Network/sector-blockchain-gui/main/src/assets/img/sector_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 5555, guessSslDirFor("Sector"))
-# addCurrency('cac', 'Cactus',
-#             'https://raw.githubusercontent.com/Cactus-Network/cactus-blockchain/main/cactus-blockchain-gui/src/assets/img/cactus_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 11555, guessSslDirFor("Cactus"))
-# addCurrency('cans', 'Cannabis',
-#             'https://raw.githubusercontent.com/CannabisChain/cannabis-blockchain-gui/main/src/assets/img/cannabis_circle.png',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 5540, guessSslDirFor("Cannabis"))
-# addCurrency('xmz', 'Maize',
-#             'https://raw.githubusercontent.com/Maize-Network/maize-blockchain/main/maize-blockchain-gui/src/assets/img/chia_circle.svg',
-#             1000000000000, 1, 192, 32, '127.0.0.1', 8655, guessSslDirFor("Maize"))
+            1000000000000, 1, 192, 32, '127.0.0.1', 6755, guessSslDirFor("Flax"))
+addCurrency('cgn', 'Chaingreen',
+            'https://raw.githubusercontent.com/ChainGreenOrg/chaingreen-blockchain-gui/main/src/assets/img/chia_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 8855, guessSslDirFor("Chaingreen"))
+addCurrency('xcc', 'Chives',
+            'https://raw.githubusercontent.com/HiveProject2021/chives-blockchain-gui/main/src/assets/img/chives_circle.png',
+            100000000, 1, 192, 32, '127.0.0.1', 9755, guessSslDirFor("Chives"))
+addCurrency('spare', 'Spare',
+            'https://raw.githubusercontent.com/Spare-Network/spare-blockchain/master/spare-blockchain-gui/src/assets/img/spare.ico',
+            1000000000000, 1, 192, 32, '127.0.0.1', 9555, guessSslDirFor("spare-blockchain"))
+addCurrency('xfl', 'Flora',
+            'https://raw.githubusercontent.com/Flora-Network/flora-blockchain-gui/main/src/assets/img/flora_circle.png',
+            1000000000000, 1, 192, 32, '127.0.0.1', 18755, guessSslDirFor("Flora"))
+addCurrency('xdg', 'DogeChia',
+            'https://raw.githubusercontent.com/DogeChia/dogechia-blockchain-gui/main/src/assets/img/dogechia.png',
+            1000000000000, 1, 192, 32, '127.0.0.1', 6769, guessSslDirFor("DogeChia"))
+# no seno_circle.svg, no logo.
+addCurrency('xse', 'Seno',
+            'https://raw.githubusercontent.com/Chia-Network/chia-blockchain-gui/main/src/assets/img/chia_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 18555, guessSslDirFor("Seno2"))
+addCurrency('xcr', 'Chiarose',
+            'https://raw.githubusercontent.com/snight1983/chia-rosechain/main/chia-rosechain-gui/src/assets/img/chia_circle.png',
+            1000000000, 1, 192, 32, '127.0.0.1', 8025, guessSslDirFor("Chiarose"))
+addCurrency('hdd', 'HDDCoin',
+            'https://raw.githubusercontent.com/HDDcoin-Network/hddcoin-blockchain/main/hddcoin-blockchain-gui/src/assets/img/hddcoin_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 28555, guessSslDirFor("HDDCoin"))
+addCurrency('sit', 'Silicoin',
+            'https://raw.githubusercontent.com/silicoin-network/silicoin-blockchain-gui/main/src/assets/img/chia_circle.png',
+            1000000000000, 1, 192, 32, '127.0.0.1', 10555, guessSslDirFor("Silicoin"))
+addCurrency('gdog', 'GreenDoge',
+            'https://raw.githubusercontent.com/GreenDoge-Network/greendoge-blockchain/main/greendoge-blockchain-gui/src/assets/img/greendoge_circle.png',
+            1000000000000, 1, 192, 32, '127.0.0.1', 6655, guessSslDirFor("GreenDoge"))
+addCurrency('avo', 'Avocado',
+            'https://raw.githubusercontent.com/Avocado-Network/avocado-blockchain-gui/main/src/assets/img/avocado_circle.png',
+            1000000000000, 1, 192, 32, '127.0.0.1', 7544, guessSslDirFor("Avocado"))
+addCurrency('xka', 'Kale',
+            'https://raw.githubusercontent.com/Kale-Network/kale-blockchain/main/kale-blockchain-gui/src/assets/img/kale_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 6355, guessSslDirFor("Kale"))
+addCurrency('xtx', 'Taco',
+            'https://raw.githubusercontent.com/Taco-Network/taco-blockchain/main/taco-blockchain-gui/src/assets/img/taco_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 18735, guessSslDirFor("Taco"))
+addCurrency('xeq', 'Equality',
+            'https://raw.githubusercontent.com/Equality-Network/equality-blockchain-gui/master/src/assets/img/equality_circle.png',
+            1000000000000, 1, 192, 32, '127.0.0.1', 9547, guessSslDirFor("Equality"))
+addCurrency('sock', 'Socks',
+            'https://bitbucket.org/Socks-Network/socks-blockchain-gui/raw/aefb284f40a2ff521591d79702b478317581ce94/src/assets/img/socks_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 58455, guessSslDirFor("Socks"))
+addCurrency('wheat', 'Wheat',
+            'https://raw.githubusercontent.com/wheatnetwork/wheat-blockchain-gui/main/src/assets/img/wheat_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 21555, guessSslDirFor("Wheat"))
+addCurrency('xmx', 'Melati',
+            'https://raw.githubusercontent.com/Melati-Network/melati-blockchain-gui/main/src/assets/img/melati_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 2555, guessSslDirFor("Melati"))
+addCurrency('tad', 'Tad',
+            'https://raw.githubusercontent.com/Tad-Network/tad-blockchain-gui/main/src/assets/img/tad_circle.png',
+            1000000000000, 1, 192, 32, '127.0.0.1', 4555, guessSslDirFor("Tad"))
+addCurrency('xsc', 'Sector',
+            'https://raw.githubusercontent.com/Sector-Network/sector-blockchain-gui/main/src/assets/img/sector_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 5555, guessSslDirFor("Sector"))
+addCurrency('cac', 'Cactus',
+            'https://raw.githubusercontent.com/Cactus-Network/cactus-blockchain/main/cactus-blockchain-gui/src/assets/img/cactus_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 11555, guessSslDirFor("Cactus"))
+addCurrency('cans', 'Cannabis',
+            'https://raw.githubusercontent.com/CannabisChain/cannabis-blockchain-gui/main/src/assets/img/cannabis_circle.png',
+            1000000000000, 1, 192, 32, '127.0.0.1', 5540, guessSslDirFor("Cannabis"))
+addCurrency('xmz', 'Maize',
+            'https://raw.githubusercontent.com/Maize-Network/maize-blockchain/main/maize-blockchain-gui/src/assets/img/chia_circle.svg',
+            1000000000000, 1, 192, 32, '127.0.0.1', 8655, guessSslDirFor("Maize"))
 
 conn.close()
