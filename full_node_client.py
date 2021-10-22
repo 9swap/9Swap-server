@@ -30,7 +30,7 @@ class FullNodeClient():
             self.logfile.write(f"Request to {endpoint}, data: {data}\n")
             self.logfile.flush()
         try:
-            r = requests.post(url, json=data, cert=(self.cert_path, self.key_path) if self.cert_path.exists() else None,
+            r = requests.post(url, json=data, cert=(self.cert_path, self.key_path) if self.port and self.cert_path.exists() else None,
                               verify=False)
             if debug:
                 print(endpoint, data, r.text)
