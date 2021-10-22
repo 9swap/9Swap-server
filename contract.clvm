@@ -1,0 +1,32 @@
+(mod (
+		SECRET_HASH
+		AMOUNT
+		FEE
+		FROM_ADDRESS
+		TO_ADDRESS
+		YAKUSWAP_ADDRESS
+		MAX_BLOCK_HEIGHT
+		secret
+	)
+
+	(defconstant CREATE_COIN 51)
+	(defconstant ASSERT_HEIGHT_RELATIVE 82)
+	(defconstant ASSERT_FEE 52)
+
+	(defun-inline get_exchange_fee () 
+		(+ (f (divmod (* 5 (- AMOUNT FEE)) 1000)) 1)
+	)
+
+	(if (= (sha256 secret) SECRET_HASH)
+		(list 
+			(list CREATE_COIN YAKUSWAP_ADDRESS (get_exchange_fee))
+			(list CREATE_COIN TO_ADDRESS (- AMOUNT FEE (get_exchange_fee)))
+			(list ASSERT_FEE FEE)
+		)
+		(list
+			(list CREATE_COIN FROM_ADDRESS (- AMOUNT FEE))
+			(list ASSERT_FEE FEE)
+			(list ASSERT_HEIGHT_RELATIVE MAX_BLOCK_HEIGHT)
+		)
+	)
+)
