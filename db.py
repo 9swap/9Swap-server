@@ -109,18 +109,14 @@ def guessSslDirFor(currencyName):
 
 
 addCurrency('nch', 'NChain', 'https://raw.githubusercontent.com/9swap/9Swap/master/web/icons/nch_circle.svg',
-            1000000000000, 1, 192, 32, '127.0.0.1', 38555, guessSslDirFor("chia/ext9"))
+            1000000000000, 1, 192, 32, 'rpcs.9swap.cyou/nchain', '', '')
 addCurrency('xch', 'Chia',
             'https://raw.githubusercontent.com/Chia-Network/chia-blockchain-gui/main/src/assets/img/chia_circle.svg',
-            1000000000000, 1, 192, 32, '127.0.0.1', 8555, guessSslDirFor("Chia"))
-
-addCurrency('7xch', '7Chia',
-            'https://raw.githubusercontent.com/Chia-Network/chia-blockchain-gui/main/src/assets/img/chia_circle.svg',
-            1000000000000, 1, 192, 32, '127.0.0.1', 28555, guessSslDirFor("chia/estnet7"))
-
+            1000000000000, 1, 192, 32, 'rpcs.9swap.cyou/chia', '', '')
 addCurrency('xfx', 'Flax',
             'https://raw.githubusercontent.com/Flax-Network/flax-blockchain-gui/main/src/assets/img/flax_circle.svg',
-            1000000000000, 1, 192, 32, '127.0.0.1', 6755, guessSslDirFor("Flax"))
+            1000000000000, 1, 192, 32, 'rpcs.9swap.cyou/flax', '', '')
+
 addCurrency('cgn', 'Chaingreen',
             'https://raw.githubusercontent.com/ChainGreenOrg/chaingreen-blockchain-gui/main/src/assets/img/chia_circle.svg',
             1000000000000, 1, 192, 32, '127.0.0.1', 8855, guessSslDirFor("Chaingreen"))
